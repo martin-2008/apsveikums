@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Card</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.example.com/snowflake-video.mp4') no-repeat center center / cover;
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        @keyframes snow {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: white;
+            font-size: 1.5rem;
+            animation: snow 10s linear infinite;
+        }
+
+        .snowflake:nth-child(odd) {
+            animation-duration: 8s;
+            animation-delay: -2s;
+        }
+
+        .snowflake:nth-child(even) {
+            animation-duration: 12s;
+            animation-delay: -4s;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            color: white;
+            width: 300px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            z-index: 10;
+        }
+
+        .card-header {
+            background-color: #ff4b5c;
+            padding: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-body p {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        .card-body .tree {
+            margin: 20px auto;
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+
+        .tree::before, .tree::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+        }
+
+        .tree::before {
+            top: 0;
+            border-bottom: 70px solid #3a7d44;
+        }
+
+        .tree::after {
+            top: 50px;
+            border-bottom: 70px solid #2a5e32;
+        }
+
+        .card-footer {
+            background-color: #ff4b5c;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+
+        .snowflakes {
+            margin-top: 20px;
+        }
+
+        .snowflakes span {
+            display: inline-block;
+            font-size: 1.2rem;
+            margin: 0 3px;
+        }
+
+        .emoji {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="snowflake" style="left: 5%;">&#10052;</div>
+    <div class="snowflake" style="left: 10%;">&#10052;</div>
+    <div class="snowflake" style="left: 15%;">&#10052;</div>
+    <div class="snowflake" style="left: 20%;">&#10052;</div>
+    <div class="snowflake" style="left: 25%;">&#10052;</div>
+    <div class="snowflake" style="left: 30%;">&#10052;</div>
+    <div class="snowflake" style="left: 35%;">&#10052;</div>
+    <div class="snowflake" style="left: 40%;">&#10052;</div>
+    <div class="snowflake" style="left: 45%;">&#10052;</div>
+    <div class="snowflake" style="left: 50%;">&#10052;</div>
+    <div class="snowflake" style="left: 55%;">&#10052;</div>
+    <div class="snowflake" style="left: 60%;">&#10052;</div>
+    <div class="snowflake" style="left: 65%;">&#10052;</div>
+    <div class="snowflake" style="left: 70%;">&#10052;</div>
+    <div class="snowflake" style="left: 75%;">&#10052;</div>
+    <div class="snowflake" style="left: 80%;">&#10052;</div>
+    <div class="snowflake" style="left: 85%;">&#10052;</div>
+    <div class="snowflake" style="left: 90%;">&#10052;</div>
+    <div class="snowflake" style="left: 95%;">&#10052;</div>
+
+    <div class="card">
+        <div class="card-header">
+            🎄 Merry Christmas! 🎅
+        </div>
+        <div class="card-body">
+            <div class="tree"></div>
+            <p>Wishing you a season of joy, love, and laughter! 🎁✨</p>
+            <div class="snowflakes">
+                <span>&#10052;</span>
+                <span>&#10052;</span>
+                <span>&#10052;</span>
+            </div>
+            <div class="emoji">🎁❄️🎉✨</div>
+        </div>
+        <div class="card-footer">
+            &copy; 2024 - Routers 🎅
+        </div>
+    </div>
+</body>
+</html>
